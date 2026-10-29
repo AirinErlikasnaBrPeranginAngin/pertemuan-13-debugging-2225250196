@@ -8,6 +8,8 @@ test_case = [
     (80, "Lulus"),
     (60, "Lulus"),
     (59, "Tidak lulus"),
+    (100, "Lulus"),
+    (0, "Tidak lulus")
 ]
 
 for nilai, hasil_harapan in test_case:
