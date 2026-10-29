@@ -24,27 +24,45 @@ T5| "[80, 60, 90, 70]" nilai tertinggi| "90"| "0"| PASS
 
 Bug Report
 
-Bug 1: Perhitungan rata-rata
+B01 — Perhitungan Rata-rata
 
-- Penyebab: Pembagian menggunakan angka tetap 5.
-- Perbaikan: Menggunakan "len(nilai)" untuk menghitung jumlah data.
-- Hasil: Rata-rata menjadi "75.0".
+- Gejala: Rata-rata yang dihasilkan adalah 60.0, padahal seharusnya 75.0.
+- Test case: T1.
+- Lokasi: "praktik/praktik_4_debugging.py", fungsi "hitung_rata_rata()".
+- Akar penyebab: Pembagi rata-rata tidak sesuai dengan jumlah data.
+- Perbaikan: Mengganti pembagi dengan "len(nilai)" dan menambahkan pemeriksaan jika data kosong.
+- Retest: PASS — rata-rata data "[80, 60, 90, 70]" menjadi 75.0.
 
-Bug 2: Status kelulusan
+B02 — Batas Kelulusan
 
-- Penyebab: Menggunakan operator "> 60".
-- Perbaikan: Mengganti operator menjadi ">= 60".
-- Hasil: Nilai 60 dinyatakan lulus.
+- Gejala: Nilai 60 dinyatakan tidak lulus, padahal seharusnya lulus.
+- Test case: T3.
+- Lokasi: "praktik/praktik_4_debugging.py", fungsi "status()".
+- Akar penyebab: Kondisi menggunakan "nilai > 60", sehingga nilai 60 tidak termasuk lulus.
+- Perbaikan: Mengubah kondisi menjadi "nilai >= 60".
+- Retest: PASS — nilai 60 dinyatakan Lulus dan nilai 59 dinyatakan Tidak lulus.
 
-Bug 3: Nilai tertinggi
+B03 — Nilai Tertinggi
 
-- Penyebab: Menggunakan operator "<" dan nilai awal 0.
-- Perbaikan: Memulai dari nilai pertama dan menggunakan operator ">".
-- Hasil: Nilai tertinggi menjadi "90".
+- Gejala: Program menghasilkan nilai tertinggi 0, bukan 90.
+- Test case: T5.
+- Lokasi: "praktik/praktik_4_debugging.py", fungsi "nilai_tertinggi()".
+- Akar penyebab: Perbandingan menggunakan operator "<", sehingga pencarian nilai tertinggi tidak berjalan dengan benar.
+- Perbaikan: Memulai nilai tertinggi dari elemen pertama dan menggunakan operator ">".
+- Retest: PASS — nilai tertinggi dari "[80, 60, 90, 70]" adalah 90
 
 Retest
 
-Setelah perbaikan, program dijalankan kembali dengan input awal.
+Semua test case telah dijalankan kembali setelah perbaikan.
+
+ID| Hasil yang Diharapkan| Hasil Aktual Setelah Perbaikan| Status
+T1| Rata-rata 75.0| 75.0| PASS
+T2| Rata-rata 90.0| 90.0| PASS
+T3| Lulus| Lulus| PASS
+T4| Tidak lulus| Tidak lulus| PASS
+T5| Nilai tertinggi 90| 90| PASS
+
+Tidak ditemukan kegagalan pada kelima test case setelah perbaikan.
 
 Hasil pengujian:
 
