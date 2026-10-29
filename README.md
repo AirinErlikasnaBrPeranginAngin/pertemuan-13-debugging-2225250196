@@ -14,7 +14,6 @@ Pada pertemuan ini, dilakukan debugging pada tiga kesalahan program:
 
 Test Case
 
-
 ID| Input| Expected| Actual Awal| Status
 T1| "[80, 60, 90, 70]" rata-rata| "75.0"| "60.0"| PASS
 T2| "[100, 80]" rata-rata| "90.0"| Belum diuji sebelum perbaikan| PASS
@@ -77,6 +76,7 @@ Cara Menjalankan
 Jalankan perintah berikut pada terminal VS Code:
 
 python praktik/praktik_4_debugging.py
+python latihan/03_test_case.py
 
 Refleksi
 
