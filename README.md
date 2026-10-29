@@ -56,9 +56,9 @@ Semua test case telah dijalankan kembali setelah perbaikan.
 
 ID| Hasil yang Diharapkan| Hasil Aktual Setelah Perbaikan| Status
 T1| Rata-rata 75.0| 75.0| PASS
-T2| Rata-rata 90.0| 90.0| PASS
+T2 | "[100, 80]" rata-rata | "90.0" | Belum diuji sebelum perbaikan | Belum diverifikasi
 T3| Lulus| Lulus| PASS
-T4| Tidak lulus| Tidak lulus| PASS
+T4 | Nilai "59" untuk status | "Tidak lulus" | Belum diuji sebelum perbaikan | Belum diverifikasi
 T5| Nilai tertinggi 90| 90| PASS
 
 Tidak ditemukan kegagalan pada kelima test case setelah perbaikan.
