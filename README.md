@@ -78,6 +78,47 @@ Jalankan perintah berikut pada terminal VS Code:
 python praktik/praktik_4_debugging.py
 python latihan/03_test_case.py
 
+Bukti Tracing dan Pengujian
+
+1. Tracing Perulangan
+
+Program "latihan/01_trace_loop.py" menghasilkan:
+
+Iterasi| Nilai i| Nilai total
+1| 1| 1
+2| 2| 3
+3| 3| 6
+4| 4| 10
+
+Nilai total bertambah pada setiap iterasi hingga mencapai 10.
+
+2. Tracing Fungsi
+
+Program "latihan/02_trace_fungsi.py" menghasilkan:
+
+- Angka pertama: 10
+- Angka kedua: 5
+- Hasil penjumlahan: 15
+
+3. Pengujian Status Kelulusan
+
+Lima test case telah dijalankan. Nilai 80, 60, dan 100 menghasilkan status Lulus, sedangkan nilai 59 dan 0 menghasilkan status Tidak lulus. Semua test case berstatus PASS.
+
+4. Pengujian Program Praktik
+
+Program "praktik/praktik_4_debugging.py" menghasilkan:
+
+- Rata-rata: 75.0
+- Status 60: Lulus
+- Nilai tertinggi: 90
+
+Hasil tersebut sesuai dengan hasil yang diharapkan untuk data pengujian yang digunakan.
+
+5. Latihan Debugger
+
+Program "latihan/04_debug_breakpoint.py" menghasilkan total nilai 230.
+
+
 Refleksi
 
 Saya belajar bahwa debugging digunakan untuk menemukan dan memperbaiki kesalahan program. Tracing membantu memahami perubahan nilai variabel, sedangkan testing digunakan untuk membandingkan hasil aktual dengan hasil yang diharapkan. Setelah memperbaiki bug, program perlu diuji kembali untuk memastikan hasilnya benar.
